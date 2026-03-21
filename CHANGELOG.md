@@ -1,8 +1,8 @@
 # Changelog
 
-## Version 1.0.0 (March 2026)
+## 🚀 Version 1.0.0 (March 2026)
 
-### New Features
+### 📦 New Features
 - **Comment Migration**: Migrates TalkBack comments and replies into JComments with full threading support
 - **Auto-matching**: Resolves TalkBack URL paths to Joomla article IDs via slug matching
 - **Manual Overrides**: Assign unmatched URLs to articles with sample comment preview

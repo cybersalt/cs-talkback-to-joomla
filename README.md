@@ -70,5 +70,5 @@ GNU General Public License version 2 or later. See [LICENSE](LICENSE).
 ## Author
 
 **Cybersalt Consulting Ltd.**
-- Website: [cybersalt.org](https://cybersalt.org)
-- Email: info@cybersalt.org
+- Website: [cybersalt.com](https://cybersalt.com)
+- Email: support@cybersalt.com
