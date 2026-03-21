@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_TALKBACKMIGRATE</name>
+    <author>Cybersalt</author>
+    <creationDate>2026-03</creationDate>
+    <copyright>Copyright (C) 2026 Cybersalt Consulting Ltd. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>info@cybersalt.org</authorEmail>
+    <authorUrl>https://cybersalt.org</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_TALKBACKMIGRATE_DESC</description>
+    <namespace path="src">Cybersalt\Component\TalkbackMigrate</namespace>
+    <scriptfile>script.php</scriptfile>
+    <changelogurl>https://raw.githubusercontent.com/cybersalt/cs-talkback-to-joomla/main/CHANGELOG.html</changelogurl>
+
+    <administration>
+        <files folder="admin">
+            <folder>services</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>language</folder>
+        </files>
+        <menu>COM_TALKBACKMIGRATE</menu>
+    </administration>
+</extension>

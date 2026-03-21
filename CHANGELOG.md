@@ -1,0 +1,15 @@
+# Changelog
+
+## Version 1.0.0 (March 2026)
+
+### New Features
+- **Comment Migration**: Migrates TalkBack comments and replies into JComments with full threading support
+- **Auto-matching**: Resolves TalkBack URL paths to Joomla article IDs via slug matching
+- **Manual Overrides**: Assign unmatched URLs to articles with sample comment preview
+- **Review All Mappings**: View and edit all URL-to-article pairings
+- **Search**: Find comments by author, text, email, or TalkBack ID across both systems
+- **Diagnose Threading**: Side-by-side comparison of old and new comment data
+- **Undo**: Safe removal of all imported comments via `source='talkback'` tag
+- **Dry Run**: Preview migration results before committing
+- **Language Detection**: Auto-detects JComments language setting for imported comments
+- **Object Cache**: Automatically creates JComments object cache entries for migrated articles
