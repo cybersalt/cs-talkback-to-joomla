@@ -54,14 +54,9 @@ TalkBack stores comments in a `bt_data` table with these key fields:
 | `text` | Comment body (HTML) |
 | `moderate` | 0 = approved |
 
-## Building
+## About TalkBack Comments
 
-Build the installable ZIP with 7-Zip:
-
-```powershell
-cd cs-talkback-to-joomla
-& 'C:\Program Files\7-Zip\7z.exe' a -tzip com_talkbackmigrate_v1.0.0.zip talkbackmigrate.xml script.php admin
-```
+[TalkBack Comments](https://github.com/richardwilliamson/TalkBack-Comments) was a standalone PHP commenting system by Richard Williamson (OldGuy), popular with Joomla sites before modern Joomla-native comment extensions existed. If you're migrating away from TalkBack and need to preserve your comment history in JComments, this tool handles the conversion including threading, date preservation, and URL-to-article mapping.
 
 ## License
 
