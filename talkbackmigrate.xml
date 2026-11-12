@@ -2,16 +2,21 @@
 <extension type="component" method="upgrade">
     <name>COM_TALKBACKMIGRATE</name>
     <author>Cybersalt</author>
-    <creationDate>2026-03</creationDate>
+    <creationDate>2026-11</creationDate>
     <copyright>Copyright (C) 2026 Cybersalt. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>support@cybersalt.com</authorEmail>
     <authorUrl>https://cybersalt.com</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>COM_TALKBACKMIGRATE_DESC</description>
     <namespace path="src">Cybersalt\Component\TalkbackMigrate</namespace>
     <scriptfile>script.php</scriptfile>
-    <changelogurl>https://raw.githubusercontent.com/cybersalt/cs-talkback-to-joomla/main/CHANGELOG.html</changelogurl>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Cybersalt TalkBack to JComments Migration">https://www.cybersalt.com/index.php?option=com_csreleasemanager&amp;task=api.updatexml&amp;format=raw&amp;element=com_talkbackmigrate</server>
+    </updateservers>
+
+    <changelogurl>https://www.cybersalt.com/index.php?option=com_csreleasemanager&amp;task=api.changelogxml&amp;format=raw&amp;element=com_talkbackmigrate</changelogurl>
 
     <administration>
         <files folder="admin">

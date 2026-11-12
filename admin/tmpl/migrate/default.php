@@ -75,16 +75,22 @@ try {
                         <span class="icon-eye"></span>
                         <?php echo Text::_('COM_TALKBACKMIGRATE_BTN_REPORT'); ?>
                     </a>
-                    <a href="<?php echo $baseUrl . '&action=migrate'; ?>" class="btn btn-success text-white"
-                       onclick="return confirm('<?php echo Text::_('COM_TALKBACKMIGRATE_CONFIRM_MIGRATE', true); ?>');">
-                        <span class="icon-upload"></span>
-                        <?php echo Text::_('COM_TALKBACKMIGRATE_BTN_MIGRATE'); ?>
-                    </a>
-                    <a href="<?php echo $baseUrl . '&action=undo'; ?>" class="btn btn-danger"
-                       onclick="return confirm('<?php echo Text::_('COM_TALKBACKMIGRATE_CONFIRM_UNDO', true); ?>');">
-                        <span class="icon-undo"></span>
-                        <?php echo Text::_('COM_TALKBACKMIGRATE_BTN_UNDO'); ?>
-                    </a>
+                    <form method="post" action="<?php echo Route::_('index.php?option=com_talkbackmigrate&action=migrate'); ?>" class="d-inline"
+                          onsubmit="return confirm('<?php echo Text::_('COM_TALKBACKMIGRATE_CONFIRM_MIGRATE', true); ?>');">
+                        <button type="submit" class="btn btn-success text-white">
+                            <span class="icon-upload"></span>
+                            <?php echo Text::_('COM_TALKBACKMIGRATE_BTN_MIGRATE'); ?>
+                        </button>
+                        <?php echo HTMLHelper::_('form.token'); ?>
+                    </form>
+                    <form method="post" action="<?php echo Route::_('index.php?option=com_talkbackmigrate&action=undo'); ?>" class="d-inline"
+                          onsubmit="return confirm('<?php echo Text::_('COM_TALKBACKMIGRATE_CONFIRM_UNDO', true); ?>');">
+                        <button type="submit" class="btn btn-danger">
+                            <span class="icon-undo"></span>
+                            <?php echo Text::_('COM_TALKBACKMIGRATE_BTN_UNDO'); ?>
+                        </button>
+                        <?php echo HTMLHelper::_('form.token'); ?>
+                    </form>
                 </div>
             </div>
         </div>

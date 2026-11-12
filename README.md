@@ -1,6 +1,6 @@
 # cs-talkback-to-joomla
 
-A Joomla 5 admin component that migrates comments from the legacy TalkBack commenting system into [JComments](https://storejextensions.org).
+A Joomla 5/6 admin component that migrates comments from the legacy TalkBack commenting system into [JComments](https://storejextensions.org).
 
 ## Features
 
@@ -17,8 +17,8 @@ A Joomla 5 admin component that migrates comments from the legacy TalkBack comme
 
 ## Requirements
 
-- Joomla 5.x
-- PHP 8.1+
+- Joomla 5.x or 6.x
+- PHP 8.1+ (PHP 8.3+ recommended for Joomla 6)
 - JComments extension installed and enabled
 - TalkBack `bt_data` table present in the same database
 
@@ -57,6 +57,12 @@ TalkBack stores comments in a `bt_data` table with these key fields:
 ## About TalkBack Comments
 
 [TalkBack Comments](https://github.com/richardwilliamson/TalkBack-Comments) was a standalone PHP commenting system by Richard Williamson (OldGuy), popular with Joomla sites before modern Joomla-native comment extensions existed. If you're migrating away from TalkBack and need to preserve your comment history in JComments, this tool handles the conversion including threading, date preservation, and URL-to-article mapping.
+
+## Need to Migrate Comments from a Different System?
+
+If you're moving comments from another legacy commenting system into Joomla — whether it's Disqus, Komento, JA Comment, RSComments, or any custom/standalone comment tool — [Cybersalt Consulting](https://cybersalt.com) can help. This component was built as a real-world migration tool and the same approach (mapping, threading, safe undo, dry runs) can be adapted for any source system and any Joomla-native comment extension.
+
+**Get in touch:** [support@cybersalt.com](mailto:support@cybersalt.com)
 
 ## License
 
