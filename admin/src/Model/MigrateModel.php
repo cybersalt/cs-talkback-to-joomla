@@ -453,7 +453,7 @@ class MigrateModel extends BaseDatabaseModel
         $log[] = 'Separated: ' . count($topLevel) . ' top-level, ' . count($replies) . ' replies, ' . $skipped . ' skipped';
         $log[] = '';
 
-        // Detect language to use from existing JComments
+        // Detect language to use from existing JComment
         $db->setQuery("SELECT lang, COUNT(*) as cnt FROM #__jcomment WHERE (source != 'talkback' OR source IS NULL OR source = '') AND lang != '' GROUP BY lang ORDER BY cnt DESC LIMIT 1");
         $existingLang = $db->loadObject();
         $commentLang = $existingLang ? $existingLang->lang : 'en-GB';
@@ -604,7 +604,7 @@ class MigrateModel extends BaseDatabaseModel
             $log[] = '<span class="text-danger">ERROR: ' . htmlspecialchars($e->getMessage()) . '</span>';
         }
 
-        // Pass 4: Fix language field to match existing JComments
+        // Pass 4: Fix language field to match existing JComment
         $log[] = 'Pass 4: Fixing language field...';
         try {
             // Detect the lang used by existing non-imported comments
@@ -626,7 +626,7 @@ class MigrateModel extends BaseDatabaseModel
         $log[] = '<strong>Verification:</strong>';
         $db->setQuery("SELECT COUNT(*) FROM #__jcomment WHERE source='talkback'");
         $totalInDb = (int) $db->loadResult();
-        $log[] = '&nbsp;&nbsp;Total comments in JComments: ' . $totalInDb;
+        $log[] = '&nbsp;&nbsp;Total comments in JComment: ' . $totalInDb;
 
         $db->setQuery("SELECT COUNT(*) FROM #__jcomment WHERE source='talkback' AND parent = 0");
         $topInDb = (int) $db->loadResult();
@@ -718,7 +718,7 @@ class MigrateModel extends BaseDatabaseModel
     }
 
     /**
-     * Diagnose threading for a specific href - shows old TalkBack data vs what's in JComments
+     * Diagnose threading for a specific href - shows old TalkBack data vs what's in JComment
      */
     public function diagnose(string $href = ''): array
     {
@@ -810,9 +810,9 @@ class MigrateModel extends BaseDatabaseModel
             $log[] = '... and ' . (count($oldComments) - 30) . ' more';
         }
 
-        // === JCOMMENTS DATA ===
+        // === JCOMMENT DATA ===
         $log[] = '';
-        $log[] = '<strong style="color:#198754;">JCOMMENTS DATA (after migration):</strong>';
+        $log[] = '<strong style="color:#198754;">JCOMMENT DATA (after migration):</strong>';
 
         // Find the article ID for this href
         $result = $this->buildMapping();
@@ -836,11 +836,11 @@ class MigrateModel extends BaseDatabaseModel
         $jcComments = $db->loadObjectList();
 
         if (empty($jcComments)) {
-            $log[] = '<span class="text-warning">No migrated comments found in JComments for this article.</span>';
+            $log[] = '<span class="text-warning">No migrated comments found in JComment for this article.</span>';
             return $log;
         }
 
-        $log[] = 'Found ' . count($jcComments) . ' comments in JComments:';
+        $log[] = 'Found ' . count($jcComments) . ' comments in JComment:';
         $log[] = '';
 
         $log[] = '<table class="table table-sm table-bordered" style="font-size:12px;">';
@@ -879,7 +879,7 @@ class MigrateModel extends BaseDatabaseModel
         $jcBroken = (int) $db->loadResult();
 
         $log[] = '';
-        $log[] = '<strong>JComments stats for this article:</strong>';
+        $log[] = '<strong>JComment stats for this article:</strong>';
         $log[] = '&nbsp;&nbsp;Top-level (parent=0): ' . $jcTop;
         $log[] = '&nbsp;&nbsp;Replies (parent>0): ' . $jcReplies;
         if ($jcBroken > 0) {
@@ -891,7 +891,7 @@ class MigrateModel extends BaseDatabaseModel
 
     /**
      * Search for comments by author, text, or TalkBack ID.
-     * Shows both old TalkBack data and where it ended up in JComments.
+     * Shows both old TalkBack data and where it ended up in JComment.
      */
     public function search(string $query): array
     {
@@ -977,7 +977,7 @@ class MigrateModel extends BaseDatabaseModel
             }
         }
 
-        // Search in JComments for the imported version
+        // Search in JComment for the imported version
         $log[] = '';
         $log[] = '<strong style="color:#198754;">' . Text::_('COM_TALKBACKMIGRATE_SEARCH_IN_JCOMMENTS') . '</strong>';
         $log[] = '';

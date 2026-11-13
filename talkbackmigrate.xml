@@ -13,7 +13,7 @@
     <scriptfile>script.php</scriptfile>
 
     <updateservers>
-        <server type="extension" priority="1" name="Cybersalt TalkBack to JComments Migration">https://www.cybersalt.com/index.php?option=com_csreleasemanager&amp;task=api.updatexml&amp;format=raw&amp;element=com_talkbackmigrate</server>
+        <server type="extension" priority="1" name="Cybersalt TalkBack to JComment Migration">https://www.cybersalt.com/index.php?option=com_csreleasemanager&amp;task=api.updatexml&amp;format=raw&amp;element=com_talkbackmigrate</server>
     </updateservers>
 
     <changelogurl>https://www.cybersalt.com/index.php?option=com_csreleasemanager&amp;task=api.changelogxml&amp;format=raw&amp;element=com_talkbackmigrate</changelogurl>

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### 🔧 Improvements
+- **Renamed to TalkBack to JComment Migration**: the tool imports into JComment (Joomla! Extensions Store), not the older JComments, so the name and all on-screen text now say JComment
+
 ## 🚀 Version 1.0.1 (November 2026)
 
 ### 🔒 Security
