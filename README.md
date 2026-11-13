@@ -19,7 +19,7 @@ A Joomla 5/6 admin component that migrates comments from the legacy TalkBack com
 
 - Joomla 5.x or 6.x
 - PHP 8.1+ (PHP 8.3+ recommended for Joomla 6)
-- [JComment](https://storejextensions.org) 2.0 or later (Joomla! Extensions Store) installed and enabled. It writes to JComment's `#__jcomment` tables, not to the older JComments extension.
+- [JComment](https://storejextensions.org) 2.0 or later (Joomla! Extensions Store) installed and enabled. It writes to JComment's `#__jcomment` tables, not to the free JComments extension from exstreme.
 - TalkBack `bt_data` table present in the same database
 
 ## Installation
